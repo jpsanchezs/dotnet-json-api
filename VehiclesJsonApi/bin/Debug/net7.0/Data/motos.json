@@ -1,0 +1,1402 @@
+[
+    {
+      "id": 9823,
+      "make": "AJP",
+      "name": "PR7",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 600cc, 4T, refrigeración líquida",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "60 hp",
+        "capacidad_combustible": "17 L",
+        "frenos": "Disco Galfer 300mm (del) / 240mm (tras)"
+      }
+    },
+    {
+      "id": 9934,
+      "make": "Alta Motors",
+      "name": "Red Shift EX",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Eléctrico High-Speed PMAC",
+        "transmision": "Directa, relación 12:1",
+        "potencia": "42 hp",
+        "torque": "120 lb-ft",
+        "frenos": "Brembo de dos pistones"
+      }
+    },
+    {
+      "id": 10027,
+      "make": "Alta Motors",
+      "name": "Red Shift EXR",
+      "año": 2019,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Eléctrico refrigerado por líquido",
+        "transmision": "Directa sin embrague",
+        "potencia": "50 hp",
+        "bateria": "5.8 kWh Li-Ion",
+        "frenos": "Brembo hidráulicos"
+      }
+    },
+    {
+      "id": 9818,
+      "make": "Alta Motors",
+      "name": "Red Shift MX",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Eléctrico de imanes permanentes",
+        "transmision": "Reducción fija",
+        "potencia": "42 hp",
+        "peso": "118 kg",
+        "frenos": "Disco simple delantero/trasero"
+      }
+    },
+    {
+      "id": 9935,
+      "make": "Alta Motors",
+      "name": "Red Shift MXR",
+      "año": 2019,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Eléctrico de alto rendimiento",
+        "transmision": "Directa",
+        "potencia": "50 hp",
+        "torque": "147 lb-ft (en eje)",
+        "frenos": "Brembo de competición"
+      }
+    },
+    {
+      "id": 9819,
+      "make": "Alta Motors",
+      "name": "Red Shift SM",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Eléctrico PMAC",
+        "transmision": "Relación única",
+        "potencia": "42 hp",
+        "autonomia": "80-100 km (urbano)",
+        "frenos": "Disco de alto rendimiento Supermoto"
+      }
+    },
+    {
+      "id": 9542,
+      "make": "Aprilia",
+      "name": "Caponord 1200 ABS",
+      "año": 2017,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V-Twin a 90°, 1,197cc",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "125 hp",
+        "capacidad_combustible": "24 L",
+        "frenos": "Doble disco 320mm, ABS Continental"
+      }
+    },
+    {
+      "id": 9685,
+      "make": "Aprilia",
+      "name": "Caponord 1200 ABS Rally",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V-Twin 1,197cc, Ride-by-Wire",
+        "transmision": "6 velocidades con embrague antirrebote",
+        "potencia": "125 hp",
+        "suspension": "Semiactiva ADD (Aprilia Dynamic Damping)",
+        "frenos": "Brembo radiales"
+      }
+    },
+    {
+      "id": 9142,
+      "make": "Aprilia",
+      "name": "Dorsoduro 750",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V-Twin a 90°, 749.9cc",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "92 hp",
+        "capacidad_combustible": "12 L",
+        "frenos": "Pinzas radiales de 4 pistones"
+      }
+    },
+    {
+      "id": 9754,
+      "make": "Aprilia",
+      "name": "Dorsoduro 900",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V-Twin 896cc, Euro 4",
+        "transmision": "6 velocidades",
+        "potencia": "95 hp",
+        "torque": "90 Nm",
+        "frenos": "Doble disco 320mm, ABS de dos canales"
+      }
+    },
+    {
+      "id": 9938,
+      "make": "Aprilia",
+      "name": "RSV4 1100 Factory",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 de 65°, 1,099cc",
+        "transmision": "6 velocidades con Quick Shift",
+        "potencia": "217 hp",
+        "capacidad_combustible": "17.9 L",
+        "frenos": "Brembo Stylema monobloque"
+      }
+    },
+    {
+      "id": 9373,
+      "make": "Aprilia",
+      "name": "RSV4 FACTORY APRC",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 999.6cc",
+        "transmision": "6 velocidades, cassette",
+        "potencia": "184 hp",
+        "tecnologia": "Sistema APRC (Traction, Wheelie, Launch Control)",
+        "frenos": "Doble disco flotante de acero inox"
+      }
+    },
+    {
+      "id": 9374,
+      "make": "Aprilia",
+      "name": "RSV4 R APRC",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 999.6cc",
+        "transmision": "6 velocidades",
+        "potencia": "184 hp",
+        "capacidad_combustible": "18.5 L",
+        "frenos": "Brembo monobloque M430"
+      }
+    },
+    {
+      "id": 9605,
+      "make": "Aprilia",
+      "name": "RSV4 RF",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 999.6cc, 201 hp",
+        "transmision": "6 velocidades con AQS",
+        "potencia": "201 hp",
+        "suspension": "Öhlins NIX y TTX",
+        "frenos": "Brembo M50 monobloque"
+      }
+    },
+    {
+      "id": 9606,
+      "make": "Aprilia",
+      "name": "RSV4 RR",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 a 65°, 999.6cc",
+        "transmision": "6 velocidades",
+        "potencia": "201 hp",
+        "capacidad_combustible": "18.5 L",
+        "frenos": "Doble disco 330mm, ABS Bosch"
+      }
+    },
+    {
+      "id": 10030,
+      "make": "Aprilia",
+      "name": "RSV4 RR Misano",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 1,000cc (Edición Especial)",
+        "transmision": "6 velocidades, Quickshifter",
+        "potencia": "201 hp",
+        "diseño": "Gráficos conmemorativos Misano",
+        "frenos": "Brembo de alta gama"
+      }
+    },
+    {
+      "id": 9062,
+      "make": "Aprilia",
+      "name": "Shiver 750",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V-Twin 90°, 749.9cc",
+        "transmision": "6 velocidades, multidisco",
+        "potencia": "95 hp",
+        "capacidad_combustible": "15 L",
+        "frenos": "Doble disco de 320mm"
+      }
+    },
+    {
+      "id": 9755,
+      "make": "Aprilia",
+      "name": "Shiver 900",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V-Twin 896cc, 4 válvulas",
+        "transmision": "6 velocidades",
+        "potencia": "95.2 hp",
+        "torque": "90 Nm @ 6,500 rpm",
+        "frenos": "Pinzas radiales de 4 pistones"
+      }
+    },
+    {
+      "id": 9607,
+      "make": "Aprilia",
+      "name": "Tuono V4 1100 Factory",
+      "año": 2021,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 a 65°, 1,077cc",
+        "transmision": "6 velocidades con AQS",
+        "potencia": "175 hp",
+        "suspension": "Öhlins Smart EC 2.0 semiactiva",
+        "frenos": "Brembo M50"
+      }
+    },
+    {
+      "id": 9608,
+      "make": "Aprilia",
+      "name": "Tuono V4 1100 RR",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 longitudinal 1,077cc",
+        "transmision": "6 velocidades",
+        "potencia": "175 hp",
+        "capacidad_combustible": "18.5 L",
+        "frenos": "Brembo radiales 330mm"
+      }
+    },
+    {
+      "id": 10031,
+      "make": "Aprilia",
+      "name": "Tuono V4 1100 RR Misano",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 1,077cc",
+        "transmision": "6 velocidades",
+        "potencia": "175 hp",
+        "edicion": "Limitada Misano Racing",
+        "frenos": "ABS Bosch 9MP"
+      }
+    },
+    {
+      "id": 9543,
+      "make": "Aprilia",
+      "name": "Tuono V4 R APRC",
+      "año": 2014,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V4 a 65°, 999cc",
+        "transmision": "6 velocidades",
+        "potencia": "170 hp",
+        "capacidad_combustible": "17 L",
+        "frenos": "Doble disco delantero de 320mm"
+      }
+    },
+    {
+      "id": 10035,
+      "make": "Benelli",
+      "name": "Caffenero 150",
+      "año": 2021,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico, 150cc, refrigerado por líquido",
+        "transmision": "Automática CVT",
+        "potencia": "13 hp",
+        "capacidad_combustible": "7.4 L",
+        "frenos": "Disco 240mm (del) / 240mm (tras)"
+      }
+    },
+    {
+      "id": 9831,
+      "make": "Benelli",
+      "name": "TNT135",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 135cc, 4 válvulas, 2 bujías",
+        "transmision": "5 velocidades, cadena",
+        "potencia": "13 hp @ 9,000 rpm",
+        "capacidad_combustible": "7.2 L",
+        "frenos": "Disco 220mm (del) / 190mm (tras)"
+      }
+    },
+    {
+      "id": 9759,
+      "make": "Benelli",
+      "name": "TNT300",
+      "año": 2022,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico en línea, 300cc",
+        "transmision": "6 velocidades",
+        "potencia": "38.2 hp",
+        "capacidad_combustible": "16 L",
+        "frenos": "Doble disco tipo Wave de 260mm"
+      }
+    },
+    {
+      "id": 10036,
+      "make": "Benelli",
+      "name": "Zafferano 250",
+      "año": 2021,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 249.7cc, 4 tiempos",
+        "transmision": "Automática CVT",
+        "potencia": "20.8 hp",
+        "capacidad_combustible": "12 L",
+        "frenos": "Doble disco delantero"
+      }
+    },
+    {
+      "id": 9811,
+      "make": "Beta",
+      "name": "125 RR-S",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 4T, 124.6cc",
+        "transmision": "6 velocidades",
+        "potencia": "15 hp",
+        "capacidad_combustible": "7.5 L",
+        "frenos": "Disco de 260mm con frenado combinado"
+      }
+    },
+    {
+      "id": 9812,
+      "make": "Beta",
+      "name": "350 RR-S",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 4T, 349.1cc",
+        "transmision": "6 velocidades",
+        "potencia": "36 hp",
+        "capacidad_combustible": "9 L",
+        "frenos": "Disco Wave de 260mm / 240mm"
+      }
+    },
+    {
+      "id": 9813,
+      "make": "Beta",
+      "name": "390 RR-S",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 385.6cc, inyección electrónica",
+        "transmision": "6 velocidades",
+        "potencia": "40 hp (aprox)",
+        "peso": "109 kg (seco)",
+        "frenos": "Nissin de doble pistón"
+      }
+    },
+    {
+      "id": 9814,
+      "make": "Beta",
+      "name": "430 RR-S",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 430.9cc",
+        "transmision": "6 velocidades",
+        "potencia": "44 hp",
+        "capacidad_combustible": "9.1 L",
+        "frenos": "Disco simple de 260mm"
+      }
+    },
+    {
+      "id": 9226,
+      "make": "Beta",
+      "name": "430 RS",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 4T, 431cc",
+        "transmision": "6 velocidades",
+        "potencia": "42 hp",
+        "capacidad_combustible": "8 L",
+        "frenos": "Disco Galfer de alto rendimiento"
+      }
+    },
+    {
+      "id": 9815,
+      "make": "Beta",
+      "name": "500 RR-S",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 477.5cc",
+        "transmision": "6 velocidades",
+        "potencia": "48 hp",
+        "capacidad_combustible": "9.1 L",
+        "frenos": "Disco simple con pinza Nissin"
+      }
+    },
+    {
+      "id": 9228,
+      "make": "Beta",
+      "name": "500 RS",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 4T, 478cc",
+        "transmision": "6 velocidades",
+        "potencia": "46 hp",
+        "capacidad_combustible": "8 L",
+        "frenos": "Disco ondulado de 260mm"
+      }
+    },
+    {
+      "id": 9229,
+      "make": "Beta",
+      "name": "525 RS",
+      "año": 2014,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "KTM-sourced monocilíndrico 510cc",
+        "transmision": "6 velocidades",
+        "potencia": "50 hp",
+        "capacidad_combustible": "8.5 L",
+        "frenos": "Disco hidráulico Brembo"
+      }
+    },
+    {
+      "id": 9824,
+      "make": "BMW",
+      "name": "C Evolution",
+      "año": 2021,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Eléctrico síncrono refrigerado por líquido",
+        "transmision": "Relación única por correa dentada",
+        "potencia": "48 hp (pico)",
+        "autonomia": "160 km",
+        "frenos": "Doble disco delantero de 270mm con ABS"
+      }
+    },
+    {
+      "id": 9939,
+      "make": "BMW",
+      "name": "C400X",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 350cc",
+        "transmision": "Automática CVT",
+        "potencia": "34 hp @ 7,500 rpm",
+        "capacidad_combustible": "12.8 L",
+        "frenos": "Doble disco con ABS BMW Motorrad"
+      }
+    },
+    {
+      "id": 9686,
+      "make": "BMW",
+      "name": "C650 Sport",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico paralelo 647cc",
+        "transmision": "CVT",
+        "potencia": "60 hp",
+        "capacidad_combustible": "15.5 L",
+        "frenos": "Doble disco 270mm con ABS"
+      }
+    },
+    {
+      "id": 9430,
+      "make": "BMW",
+      "name": "C650GT",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico 647cc, 8 válvulas",
+        "transmision": "CVT",
+        "potencia": "60 hp",
+        "capacidad_combustible": "15.5 L",
+        "frenos": "Sistema de frenado con ABS de serie"
+      }
+    },
+    {
+      "id": 9431,
+      "make": "BMW",
+      "name": "F700GS",
+      "año": 2017,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico paralelo 798cc",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "75 hp",
+        "capacidad_combustible": "16 L",
+        "frenos": "Doble disco delantero de 300mm"
+      }
+    },
+    {
+      "id": 9825,
+      "make": "BMW",
+      "name": "F750GS",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico en línea 853cc",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "77 hp",
+        "capacidad_combustible": "15 L",
+        "frenos": "ABS Pro de serie"
+      }
+    },
+    {
+      "id": 9064,
+      "make": "BMW",
+      "name": "F800GS",
+      "año": 2017,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico paralelo 798cc",
+        "transmision": "6 velocidades",
+        "potencia": "85 hp",
+        "capacidad_combustible": "16 L",
+        "frenos": "Doble disco de 300mm"
+      }
+    },
+    {
+      "id": 9479,
+      "make": "BMW",
+      "name": "F800GS Adventure",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico 798cc",
+        "transmision": "6 velocidades",
+        "potencia": "85 hp",
+        "capacidad_combustible": "24 L",
+        "frenos": "Disco doble 300mm"
+      }
+    },
+    {
+      "id": 9480,
+      "make": "BMW",
+      "name": "F800GT",
+      "año": 2019,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico paralelo 798cc",
+        "transmision": "6 velocidades, correa dentada",
+        "potencia": "90 hp",
+        "capacidad_combustible": "15 L",
+        "frenos": "ABS BMW Motorrad"
+      }
+    },
+    {
+      "id": 8920,
+      "make": "BMW",
+      "name": "F800R",
+      "año": 2019,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico paralelo 798cc",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "90 hp",
+        "capacidad_combustible": "15 L",
+        "frenos": "Doble disco flotante de 320mm"
+      }
+    },
+    {
+      "id": 9826,
+      "make": "BMW",
+      "name": "F850GS",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico 853cc",
+        "transmision": "6 velocidades",
+        "potencia": "95 hp",
+        "capacidad_combustible": "15 L",
+        "frenos": "Frenos de doble disco de 305mm"
+      }
+    },
+    {
+      "id": 9940,
+      "make": "BMW",
+      "name": "F850GS Adventure",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico en línea 853cc",
+        "transmision": "6 velocidades",
+        "potencia": "95 hp",
+        "capacidad_combustible": "23 L",
+        "frenos": "Doble disco con pinzas Brembo"
+      }
+    },
+    {
+      "id": 10032,
+      "make": "BMW",
+      "name": "F900R",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico en línea 895cc",
+        "transmision": "6 velocidades",
+        "potencia": "105 hp @ 8,500 rpm",
+        "capacidad_combustible": "13 L",
+        "frenos": "Doble disco de 320mm con ABS Pro"
+      }
+    },
+    {
+      "id": 10033,
+      "make": "BMW",
+      "name": "F900XR",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Bicilíndrico en línea 895cc",
+        "transmision": "6 velocidades",
+        "potencia": "105 hp",
+        "capacidad_combustible": "15.5 L",
+        "frenos": "Doble disco de 320mm"
+      }
+    },
+    {
+      "id": 9756,
+      "make": "BMW",
+      "name": "G310GS",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 313cc, refrigerado por líquido",
+        "transmision": "6 velocidades",
+        "potencia": "34 hp",
+        "capacidad_combustible": "11 L",
+        "frenos": "Disco simple con ABS desconectable"
+      }
+    },
+    {
+      "id": 9687,
+      "make": "BMW",
+      "name": "G310R",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 313cc",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "34 hp",
+        "capacidad_combustible": "11 L",
+        "frenos": "Pinza radial de 4 pistones"
+      }
+    },
+    {
+      "id": 9145,
+      "make": "BMW",
+      "name": "G650GS",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 652cc",
+        "transmision": "5 velocidades, cadena",
+        "potencia": "48 hp",
+        "capacidad_combustible": "14 L",
+        "frenos": "Disco simple de 300mm"
+      }
+    },
+    {
+      "id": 9827,
+      "make": "BMW",
+      "name": "HP4 Race",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "4 cilindros en línea 999cc",
+        "transmision": "6 velocidades de carreras",
+        "potencia": "215 hp",
+        "peso": "146 kg (seco)",
+        "frenos": "Brembo GP4-PR"
+      }
+    },
+    {
+      "id": 9235,
+      "make": "BMW",
+      "name": "K1300R",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "4 cilindros 1,293cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "173 hp",
+        "capacidad_combustible": "19 L",
+        "frenos": "Doble disco con ABS Integral"
+      }
+    },
+    {
+      "id": 9068,
+      "make": "BMW",
+      "name": "K1300S",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "4 cilindros 1,293cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "175 hp",
+        "capacidad_combustible": "19 L",
+        "frenos": "Doble disco 320mm"
+      }
+    },
+    {
+      "id": 9829,
+      "make": "BMW",
+      "name": "K1600 Grand America",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "6 cilindros en línea 1,649cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "160 hp",
+        "capacidad_combustible": "26.5 L",
+        "frenos": "Doble disco con ABS Pro"
+      }
+    },
+    {
+      "id": 9828,
+      "make": "BMW",
+      "name": "K1600B",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "6 cilindros 1,649cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "160 hp",
+        "estilo": "Bagger",
+        "frenos": "Doble disco 320mm"
+      }
+    },
+    {
+      "id": 9311,
+      "make": "BMW",
+      "name": "K1600GT",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "6 cilindros en línea 1,649cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "160 hp",
+        "torque": "175 Nm",
+        "frenos": "Frenada integral BMW Motorrad"
+      }
+    },
+    {
+      "id": 9312,
+      "make": "BMW",
+      "name": "K1600GTL",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "6 cilindros 1,649cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "160 hp",
+        "confort": "Parabrisas eléctrico, maletas laterales",
+        "frenos": "Doble disco delantero"
+      }
+    },
+    {
+      "id": 9544,
+      "make": "BMW",
+      "name": "R nineT",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer de dos cilindros 1,170cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "109 hp",
+        "capacidad_combustible": "18 L",
+        "frenos": "Doble disco con pinzas radiales"
+      }
+    },
+    {
+      "id": 10034,
+      "make": "BMW",
+      "name": "R nineT /5",
+      "año": 2020,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc, aire/aceite",
+        "transmision": "6 velocidades",
+        "potencia": "110 hp",
+        "edicion": "Especial 50 aniversario",
+        "frenos": "Doble disco con ABS"
+      }
+    },
+    {
+      "id": 9757,
+      "make": "BMW",
+      "name": "R nineT Pure",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "109 hp",
+        "capacidad_combustible": "17 L",
+        "frenos": "Disco doble 320mm"
+      }
+    },
+    {
+      "id": 9758,
+      "make": "BMW",
+      "name": "R nineT Racer",
+      "año": 2019,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc",
+        "transmision": "6 velocidades",
+        "potencia": "110 hp",
+        "estilo": "Cafe Racer con semicarenado",
+        "frenos": "Brembo con ABS de serie"
+      }
+    },
+    {
+      "id": 9688,
+      "make": "BMW",
+      "name": "R nineT Scrambler",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "109 hp",
+        "capacidad_combustible": "17 L",
+        "frenos": "Pinza de 4 pistones, disco doble"
+      }
+    },
+    {
+      "id": 9830,
+      "make": "BMW",
+      "name": "R nineT Urban G/S",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc",
+        "transmision": "6 velocidades",
+        "potencia": "109 hp",
+        "estilo": "Homenaje R80G/S",
+        "frenos": "Doble disco delantero"
+      }
+    },
+    {
+      "id": 8853,
+      "make": "BMW",
+      "name": "R1200GS",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc refrigerado por aire/líquido",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "125 hp",
+        "capacidad_combustible": "20 L",
+        "frenos": "Doble disco 305mm con ABS integral"
+      }
+    },
+    {
+      "id": 8923,
+      "make": "BMW",
+      "name": "R1200GS Adventure",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "125 hp",
+        "capacidad_combustible": "30 L",
+        "frenos": "Frenada BMW Motorrad EVO"
+      }
+    },
+    {
+      "id": 8924,
+      "make": "BMW",
+      "name": "R1200R",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "125 hp",
+        "capacidad_combustible": "18 L",
+        "frenos": "Doble disco delantero 320mm"
+      }
+    },
+    {
+      "id": 9609,
+      "make": "BMW",
+      "name": "R1200RS",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc, 4T",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "125 hp",
+        "capacidad_combustible": "18 L",
+        "frenos": "Pinzas de 4 pistones, ABS"
+      }
+    },
+    {
+      "id": 8925,
+      "make": "BMW",
+      "name": "R1200RT",
+      "año": 2018,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,170cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "125 hp",
+        "capacidad_combustible": "25 L",
+        "frenos": "Sistema de frenado integral BMW"
+      }
+    },
+    {
+      "id": 9941,
+      "make": "BMW",
+      "name": "R1250GS",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer con ShiftCam, 1,254cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "136 hp",
+        "capacidad_combustible": "20 L",
+        "frenos": "ABS Pro de serie"
+      }
+    },
+    {
+      "id": 9942,
+      "make": "BMW",
+      "name": "R1250GS Adventure",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer ShiftCam 1,254cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "136 hp",
+        "capacidad_combustible": "30 L",
+        "frenos": "Doble disco 305mm"
+      }
+    },
+    {
+      "id": 9943,
+      "make": "BMW",
+      "name": "R1250R",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,254cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "136 hp",
+        "capacidad_combustible": "18 L",
+        "frenos": "ABS Pro y Control de Tracción"
+      }
+    },
+    {
+      "id": 9944,
+      "make": "BMW",
+      "name": "R1250RS",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,254cc ShiftCam",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "136 hp",
+        "capacidad_combustible": "18 L",
+        "frenos": "BMW Motorrad Integral ABS Pro"
+      }
+    },
+    {
+      "id": 9945,
+      "make": "BMW",
+      "name": "R1250RT",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Boxer 1,254cc",
+        "transmision": "6 velocidades, cardán",
+        "potencia": "136 hp",
+        "capacidad_combustible": "25 L",
+        "frenos": "Doble disco 320mm"
+      }
+    },
+    {
+      "id": 9545,
+      "make": "BMW",
+      "name": "S1000R",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "4 cilindros en línea 999cc",
+        "transmision": "6 velocidades, cadena",
+        "potencia": "165 hp",
+        "capacidad_combustible": "16.5 L",
+        "frenos": "Doble disco 320mm con ABS Pro"
+      }
+    },
+    {
+      "id": 9236,
+      "make": "BMW",
+      "name": "S1000RR",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "4 cilindros con ShiftCam 999cc",
+        "transmision": "6 velocidades con Shift Assistant Pro",
+        "potencia": "205 hp",
+        "capacidad_combustible": "16.5 L",
+        "frenos": "Pinzas M (Nissin) monobloque"
+      }
+    },
+    {
+      "id": 9610,
+      "make": "BMW",
+      "name": "S1000XR",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "4 cilindros en línea 999cc",
+        "transmision": "6 velocidades",
+        "potencia": "170 hp",
+        "capacidad_combustible": "20 L",
+        "frenos": "Doble disco flotante con ABS Pro"
+      }
+    },
+    {
+      "id": 10037,
+      "make": "Buell",
+      "name": "1190 HCR",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "V-Twin a 72°, 1,190cc",
+        "transmision": "6 velocidades",
+        "potencia": "185 hp",
+        "capacidad_combustible": "17.1 L",
+        "frenos": "Disco periférico ZTL2"
+      }
+    },
+    {
+      "id": 9946,
+      "make": "Can-Am",
+      "name": "Ryker 600",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 600 ACE bicilíndrico",
+        "transmision": "Automática CVT",
+        "potencia": "50 hp",
+        "transmision_final": "Eje cardán",
+        "frenos": "Frenada hidráulica en las 3 ruedas"
+      }
+    },
+    {
+      "id": 9947,
+      "make": "Can-Am",
+      "name": "Ryker 900",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 900 ACE tricilíndrico",
+        "transmision": "Automática CVT con reversa",
+        "potencia": "82 hp",
+        "capacidad_combustible": "20 L",
+        "frenos": "Frenos de disco hidráulicos"
+      }
+    },
+    {
+      "id": 9948,
+      "make": "Can-Am",
+      "name": "Ryker Rally Edition",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 900 ACE 900cc",
+        "transmision": "Automática CVT",
+        "potencia": "82 hp",
+        "suspension": "KYB HPG con ajuste",
+        "frenos": "Discos delanteros 270mm"
+      }
+    },
+    {
+      "id": 9611,
+      "make": "Can-Am",
+      "name": "Spyder F3",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE tricilíndrico",
+        "transmision": "Semiautomática 6 velocidades",
+        "potencia": "105 hp",
+        "capacidad_combustible": "27 L",
+        "frenos": "Brembo de 270mm"
+      }
+    },
+    {
+      "id": 9760,
+      "make": "Can-Am",
+      "name": "Spyder F3 LTD",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "Semiautomática con reversa",
+        "potencia": "115 hp",
+        "capacidad_combustible": "27 L",
+        "frenos": "Freno de pie hidráulico"
+      }
+    },
+    {
+      "id": 9612,
+      "make": "Can-Am",
+      "name": "Spyder F3-S",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "Semiautomática",
+        "potencia": "115 hp",
+        "capacidad_combustible": "27 L",
+        "frenos": "Brembo de alto rendimiento"
+      }
+    },
+    {
+      "id": 9832,
+      "make": "Can-Am",
+      "name": "Spyder F3-S 10th Anniversary Edition",
+      "año": 2017,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "6 velocidades semiautomática",
+        "potencia": "115 hp",
+        "diseño": "Edición especial limitada",
+        "frenos": "ABS, EBD y TCS"
+      }
+    },
+    {
+      "id": 9761,
+      "make": "Can-Am",
+      "name": "Spyder F3-S Daytona 500",
+      "año": 2017,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "Semiautomática",
+        "potencia": "115 hp",
+        "estilo": "Inspirado en circuito",
+        "frenos": "Brembo con ABS"
+      }
+    },
+    {
+      "id": 9949,
+      "make": "Can-Am",
+      "name": "Spyder F3-S Special",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "Semiautomática",
+        "potencia": "115 hp",
+        "capacidad_combustible": "27 L",
+        "frenos": "Frenada Brembo de 270mm"
+      }
+    },
+    {
+      "id": 9689,
+      "make": "Can-Am",
+      "name": "Spyder F3-T",
+      "año": 2023,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "6 velocidades semiautomática",
+        "potencia": "115 hp",
+        "capacidad_combustible": "27 L",
+        "frenos": "Discos con pinzas Brembo"
+      }
+    },
+    {
+      "id": 9313,
+      "make": "Can-Am",
+      "name": "Spyder RS",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 998cc V-Twin",
+        "transmision": "5 velocidades (manual o semi)",
+        "potencia": "100 hp",
+        "capacidad_combustible": "25 L",
+        "frenos": "Brembo de 4 pistones"
+      }
+    },
+    {
+      "id": 9314,
+      "make": "Can-Am",
+      "name": "Spyder RS-S",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 998cc V-Twin",
+        "transmision": "5 velocidades con reversa",
+        "potencia": "100 hp",
+        "estilo": "Deportivo bi-tono",
+        "frenos": "Disco de 270mm"
+      }
+    },
+    {
+      "id": 9315,
+      "make": "Can-Am",
+      "name": "Spyder RT",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "6 velocidades semiautomática",
+        "potencia": "115 hp",
+        "capacidad_combustible": "26.5 L",
+        "frenos": "Freno de pie integral"
+      }
+    },
+    {
+      "id": 9950,
+      "make": "Can-Am",
+      "name": "Spyder RT Limited",
+      "año": 2024,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "6 velocidades con reversa",
+        "potencia": "115 hp",
+        "capacidad_combustible": "26.5 L",
+        "frenos": "Brembo de alto rendimiento"
+      }
+    },
+    {
+      "id": 9378,
+      "make": "Can-Am",
+      "name": "Spyder RT LTD",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "6 velocidades",
+        "potencia": "115 hp",
+        "equipamiento": "Audio premium, asientos calefactables",
+        "frenos": "Brembo con ABS"
+      }
+    },
+    {
+      "id": 9317,
+      "make": "Can-Am",
+      "name": "Spyder RT-S",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 1330 ACE",
+        "transmision": "Semiautomática",
+        "potencia": "115 hp",
+        "capacidad_combustible": "26 L",
+        "frenos": "Disco de 270mm"
+      }
+    },
+    {
+      "id": 9482,
+      "make": "Can-Am",
+      "name": "Spyder ST",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 998cc V-Twin",
+        "transmision": "5 velocidades",
+        "potencia": "100 hp",
+        "capacidad_combustible": "25 L",
+        "frenos": "Brembo radiales"
+      }
+    },
+    {
+      "id": 9483,
+      "make": "Can-Am",
+      "name": "Spyder ST LTD",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 998cc V-Twin",
+        "transmision": "5 velocidades con reversa",
+        "potencia": "100 hp",
+        "confort": "Parabrisas ajustable",
+        "frenos": "Brembo con ABS"
+      }
+    },
+    {
+      "id": 9484,
+      "make": "Can-Am",
+      "name": "Spyder ST-S",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Rotax 998cc V-Twin",
+        "transmision": "5 velocidades",
+        "potencia": "100 hp",
+        "capacidad_combustible": "25 L",
+        "frenos": "Discos Brembo 270mm"
+      }
+    },
+    {
+      "id": 9425,
+      "make": "CSC",
+      "name": "Babydoll 150",
+      "año": 2015,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 149cc, refrigerado por aire",
+        "transmision": "Automática CVT",
+        "potencia": "9 hp",
+        "capacidad_combustible": "5 L",
+        "frenos": "Disco delantero / Tambor trasero"
+      }
+    },
+    {
+      "id": 9538,
+      "make": "CSC",
+      "name": "Babydoll 250",
+      "año": 2016,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Monocilíndrico 250cc",
+        "transmision": "Automática CVT",
+        "potencia": "16 hp",
+        "estilo": "Scooter retro",
+        "frenos": "Doble disco hidráulico"
+      }
+    },
+    {
+      "id": 10028,
+      "make": "CSC",
+      "name": "City Slicker",
+      "año": 2022,
+      "imagenurl": "",
+      "atributos": {
+        "motor": "Eléctrico Zongshen Brushless",
+        "transmision": "Correa dentada",
+        "potencia": "3.2 kW (pico)",
+        "autonomia": "60-80 km",
+        "frenos": "Disco hidráulico delantero/trasero"
+      }
+    }
+]
