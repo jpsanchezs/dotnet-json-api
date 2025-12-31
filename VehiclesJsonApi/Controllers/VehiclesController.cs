@@ -9,10 +9,12 @@ namespace VehiclesApi.Controllers
     public class VehiclesController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
+        private readonly IConfiguration _config; // leer configuración de appsettings.json
 
-        public VehiclesController(IWebHostEnvironment env)
+        public VehiclesController(IWebHostEnvironment env, IConfiguration config)
         {
             _env = env;
+            _config = config;
         }
 
         // endpoint para motos
@@ -33,10 +35,15 @@ namespace VehiclesApi.Controllers
                 PropertyNameCaseInsensitive = true // Ignora mayúsculas/minúsculas
             }) ?? new List<Moto>();
 
-            // se genera automáticamente la URL de la imagen usando el Id
+            // se lee la configuración desde appsettings.json
+            var accountName = _config["AzureStorage:AccountName"];
+            var container = _config["AzureStorage:Container"];
+            var sasToken = _config["AzureStorage:BlobSasToken"];
+
+            // se genera automáticamente la URL de la imagen usando el Id y el SAS Token
             foreach (var moto in motos)
             {
-                moto.ImagenUrl = $"https://miaccount.blob.core.windows.net/motos/{moto.Id}.jpg";
+                moto.ImagenUrl = $"https://{accountName}.blob.core.windows.net/{container}/{moto.Id}.jpg?{sasToken}";
             }
 
             // se devuelve la lista como respuesta
@@ -61,11 +68,17 @@ namespace VehiclesApi.Controllers
                 PropertyNameCaseInsensitive = true
             }) ?? new List<Carro>();
 
-            // se genera automáticamente la URL de la imagen usando el Id
+            // se lee la configuración desde appsettings.json
+            var accountName = _config["AzureStorage:AccountName"];
+            var container = _config["AzureStorage:Container"];
+            var sasToken = _config["AzureStorage:BlobSasToken"];
+
+            // se genera automáticamente la URL de la imagen usando el Id y el SAS Token
             foreach (var carro in carros)
             {
-                carro.ImagenUrl = $"https://miaccount.blob.core.windows.net/carros/{carro.Id}.jpg";
+                carro.ImagenUrl = $"https://{accountName}.blob.core.windows.net/{container}/{carro.Id}.jpg?{sasToken}";
             }
+
             // se devuelve la lista como respuesta
             return Ok(carros);
         }

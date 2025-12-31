@@ -1,0 +1,15 @@
+# Build
+bin/
+obj/
+
+# User-specific
+.vscode/
+*.user
+*.suo
+
+# Configuración sensible
+appsettings.Development.json
+appsettings.Local.json
+
+# Logs
+*.log
