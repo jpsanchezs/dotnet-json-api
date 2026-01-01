@@ -2,7 +2,22 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy
+                .WithOrigins(
+                    "http://localhost:5173",
+                    "https://localhost:5173",
+                    "https://tu-frontend-en-render.com" 
+                )
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -17,16 +32,17 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-// Swagger siempre, no solo en Development
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Vehicles API V1");
-    c.RoutePrefix = "swagger"; // URL será /swagger
+    c.RoutePrefix = "swagger";
 });
 
 app.UseHttpsRedirection();
+
+// cors
+app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
 
