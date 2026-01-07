@@ -25,17 +25,12 @@ namespace VehiclesApi.Controllers
             _http.DefaultRequestHeaders.Add("Accept", "application/json");
         }
 
-        // =========================
-        // PUENTE A CARAPI (FIXED)
-        // =========================
+        // PUENTE A CARAPI
 
         [HttpGet("carapi/cars")]
         public async Task<IActionResult> GetCarsFromCarApi()
         {
-            var url =
-                "https://carapi.app/api/submodels/v2" +
-                "?sort=Makes.name&direction=asc";
-
+            var url = "https://carapi.app/api/submodels/v2?sort=Makes.name&direction=asc";
             var response = await _http.GetAsync(url);
             var body = await response.Content.ReadAsStringAsync();
 
@@ -48,10 +43,7 @@ namespace VehiclesApi.Controllers
         [HttpGet("carapi/motorcycles")]
         public async Task<IActionResult> GetMotorcyclesFromCarApi()
         {
-            var url =
-                "https://carapi.app/api/models/powersports" +
-                "?sort=Makes.name&direction=asc&type=street_motorcycle";
-
+            var url = "https://carapi.app/api/models/powersports?sort=Makes.name&direction=asc&type=street_motorcycle";
             var response = await _http.GetAsync(url);
             var body = await response.Content.ReadAsStringAsync();
 
@@ -61,13 +53,11 @@ namespace VehiclesApi.Controllers
             return Content(body, "application/json");
         }
 
-        [HttpGet("carapi/trims/{submodelId}")]
-        public async Task<IActionResult> GetTrimsFromCarApi(int submodelId)
+        // Trims por submodelo (para obtener lista y así conseguir trimId)
+        [HttpGet("carapi/trims/by-submodel/{submodelId}")]
+        public async Task<IActionResult> GetTrimsBySubmodel(int submodelId)
         {
-            var url =
-                $"https://carapi.app/api/trims/v2" +
-                $"?submodel_id={submodelId}&limit=1";
-
+            var url = $"https://carapi.app/api/trims/v2?sort=Makes.name&direction=asc&submodel_id={submodelId}";
             var response = await _http.GetAsync(url);
             var body = await response.Content.ReadAsStringAsync();
 
@@ -77,9 +67,21 @@ namespace VehiclesApi.Controllers
             return Content(body, "application/json");
         }
 
-        // =========================
+        // Detalle completo de un trim específico
+        [HttpGet("carapi/trims/{trimId}")]
+        public async Task<IActionResult> GetTrimDetail(int trimId)
+        {
+            var url = $"https://carapi.app/api/trims/v2/{trimId}";
+            var response = await _http.GetAsync(url);
+            var body = await response.Content.ReadAsStringAsync();
+
+            if (!response.IsSuccessStatusCode)
+                return StatusCode((int)response.StatusCode, body);
+
+            return Content(body, "application/json");
+        }
+
         // MOTOS (JSON + AZURE)
-        // =========================
 
         [HttpGet("motos")]
         public IActionResult GetMotos()
@@ -107,9 +109,7 @@ namespace VehiclesApi.Controllers
             return Ok(motos);
         }
 
-        // =========================
         // CARROS (JSON + AZURE)
-        // =========================
 
         [HttpGet("carros")]
         public IActionResult GetCarros()

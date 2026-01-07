@@ -2,10 +2,10 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔹 HttpClient para consumir CarAPI
+// HttpClient para consumir CarAPI
 builder.Services.AddHttpClient();
 
-// 🔹 CORS
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
@@ -17,7 +17,8 @@ builder.Services.AddCors(options =>
                 "https://vehicle-information-web.onrender.com"
             )
             .AllowAnyHeader()
-            .AllowAnyMethod();
+            .AllowAnyMethod()
+            .AllowCredentials(); // opcional, si necesitas cookies/tokens
     });
 });
 
@@ -34,11 +35,16 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+// Swagger
 app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
 app.UseCors("AllowFrontend");
 
+app.UseAuthorization();
+
 app.MapControllers();
+
 app.Run();
