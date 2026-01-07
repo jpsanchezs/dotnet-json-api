@@ -11,7 +11,7 @@ builder.Services.AddCors(options =>
                 .WithOrigins(
                     "http://localhost:5173",
                     "https://localhost:5173",
-                    "https://tu-frontend-en-render.com" 
+                    "https://vehicle-information-web.onrender.com" 
                 )
                 .AllowAnyHeader()
                 .AllowAnyMethod();
