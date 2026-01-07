@@ -469,19 +469,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jpsan\\.nuget\\packages\\": {}
+    "/home/jpsanchezs/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\.NET\\API\\JSONapi\\dotnet-json-api\\VehiclesJsonApi\\VehiclesJsonApi.csproj",
+      "projectUniqueName": "/mnt/hdd/NETAPI/dotnet-json-api/VehiclesJsonApi/VehiclesJsonApi.csproj",
       "projectName": "VehiclesJsonApi",
-      "projectPath": "D:\\.NET\\API\\JSONapi\\dotnet-json-api\\VehiclesJsonApi\\VehiclesJsonApi.csproj",
-      "packagesPath": "C:\\Users\\jpsan\\.nuget\\packages\\",
-      "outputPath": "D:\\.NET\\API\\JSONapi\\dotnet-json-api\\VehiclesJsonApi\\obj\\",
+      "projectPath": "/mnt/hdd/NETAPI/dotnet-json-api/VehiclesJsonApi/VehiclesJsonApi.csproj",
+      "packagesPath": "/home/jpsanchezs/.nuget/packages/",
+      "outputPath": "/mnt/hdd/NETAPI/dotnet-json-api/VehiclesJsonApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jpsan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/jpsanchezs/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -499,11 +499,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -538,7 +533,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.122/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
