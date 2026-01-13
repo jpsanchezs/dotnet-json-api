@@ -15,13 +15,14 @@ namespace VehiclesApi.Controllers
         private readonly HttpClient _http;
         private readonly IMemoryCache _cache;
 
-        // TTLs (ajústalos si quieres)
+        // TTLs
         private static readonly TimeSpan CarsCacheTtl = TimeSpan.FromHours(6);
         private static readonly TimeSpan MotorcyclesCacheTtl = TimeSpan.FromHours(6);
         private static readonly TimeSpan TrimsCacheTtl = TimeSpan.FromHours(12);
 
-        // Bloqueo temporal cuando CarAPI devuelve 429
+        // Bloqueo temporal global cuando CarAPI responde 429
         private static DateTime _carApiBlockedUntil = DateTime.MinValue;
+        private static readonly object _blockLock = new();
 
         public VehiclesController(
             IWebHostEnvironment env,
@@ -53,21 +54,38 @@ namespace VehiclesApi.Controllers
             if (DateTime.UtcNow < _carApiBlockedUntil)
                 return StatusCode(503, "CarAPI temporalmente bloqueada");
 
-            var url = "https://carapi.app/api/submodels/v2?sort=Makes.name&direction=asc";
-            var response = await _http.GetAsync(url);
-            var body = await response.Content.ReadAsStringAsync();
-
-            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            try
             {
-                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
-                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                var url = "https://carapi.app/api/submodels/v2?sort=Makes.name&direction=asc";
+                var response = await _http.GetAsync(url);
+                var body = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                {
+                    lock (_blockLock)
+                        _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+
+                    return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                }
+
+                if (!response.IsSuccessStatusCode)
+                    return StatusCode((int)response.StatusCode, body);
+
+                _cache.Set(cacheKey, body, CarsCacheTtl);
+                return Content(body, "application/json");
             }
-
-            if (!response.IsSuccessStatusCode)
-                return StatusCode((int)response.StatusCode, body);
-
-            _cache.Set(cacheKey, body, CarsCacheTtl);
-            return Content(body, "application/json");
+            catch (HttpRequestException ex)
+            {
+                return StatusCode(503, new
+                {
+                    error = "No se pudo contactar CarAPI",
+                    detail = ex.Message
+                });
+            }
+            catch (TaskCanceledException)
+            {
+                return StatusCode(504, "Timeout llamando a CarAPI");
+            }
         }
 
         [HttpGet("carapi/motorcycles")]
@@ -81,21 +99,38 @@ namespace VehiclesApi.Controllers
             if (DateTime.UtcNow < _carApiBlockedUntil)
                 return StatusCode(503, "CarAPI temporalmente bloqueada");
 
-            var url = "https://carapi.app/api/models/powersports?sort=Makes.name&direction=asc&type=street_motorcycle";
-            var response = await _http.GetAsync(url);
-            var body = await response.Content.ReadAsStringAsync();
-
-            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            try
             {
-                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
-                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                var url = "https://carapi.app/api/models/powersports?sort=Makes.name&direction=asc&type=street_motorcycle";
+                var response = await _http.GetAsync(url);
+                var body = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                {
+                    lock (_blockLock)
+                        _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+
+                    return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                }
+
+                if (!response.IsSuccessStatusCode)
+                    return StatusCode((int)response.StatusCode, body);
+
+                _cache.Set(cacheKey, body, MotorcyclesCacheTtl);
+                return Content(body, "application/json");
             }
-
-            if (!response.IsSuccessStatusCode)
-                return StatusCode((int)response.StatusCode, body);
-
-            _cache.Set(cacheKey, body, MotorcyclesCacheTtl);
-            return Content(body, "application/json");
+            catch (HttpRequestException ex)
+            {
+                return StatusCode(503, new
+                {
+                    error = "No se pudo contactar CarAPI",
+                    detail = ex.Message
+                });
+            }
+            catch (TaskCanceledException)
+            {
+                return StatusCode(504, "Timeout llamando a CarAPI");
+            }
         }
 
         [HttpGet("carapi/trims/by-submodel/{submodelId}")]
@@ -109,21 +144,38 @@ namespace VehiclesApi.Controllers
             if (DateTime.UtcNow < _carApiBlockedUntil)
                 return StatusCode(503, "CarAPI temporalmente bloqueada");
 
-            var url = $"https://carapi.app/api/trims/v2?sort=Makes.name&direction=asc&submodel_id={submodelId}";
-            var response = await _http.GetAsync(url);
-            var body = await response.Content.ReadAsStringAsync();
-
-            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            try
             {
-                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
-                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                var url = $"https://carapi.app/api/trims/v2?sort=Makes.name&direction=asc&submodel_id={submodelId}";
+                var response = await _http.GetAsync(url);
+                var body = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                {
+                    lock (_blockLock)
+                        _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+
+                    return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                }
+
+                if (!response.IsSuccessStatusCode)
+                    return StatusCode((int)response.StatusCode, body);
+
+                _cache.Set(cacheKey, body, TrimsCacheTtl);
+                return Content(body, "application/json");
             }
-
-            if (!response.IsSuccessStatusCode)
-                return StatusCode((int)response.StatusCode, body);
-
-            _cache.Set(cacheKey, body, TrimsCacheTtl);
-            return Content(body, "application/json");
+            catch (HttpRequestException ex)
+            {
+                return StatusCode(503, new
+                {
+                    error = "No se pudo contactar CarAPI",
+                    detail = ex.Message
+                });
+            }
+            catch (TaskCanceledException)
+            {
+                return StatusCode(504, "Timeout llamando a CarAPI");
+            }
         }
 
         [HttpGet("carapi/trims/{trimId}")]
@@ -137,21 +189,38 @@ namespace VehiclesApi.Controllers
             if (DateTime.UtcNow < _carApiBlockedUntil)
                 return StatusCode(503, "CarAPI temporalmente bloqueada");
 
-            var url = $"https://carapi.app/api/trims/v2/{trimId}";
-            var response = await _http.GetAsync(url);
-            var body = await response.Content.ReadAsStringAsync();
-
-            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            try
             {
-                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
-                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                var url = $"https://carapi.app/api/trims/v2/{trimId}";
+                var response = await _http.GetAsync(url);
+                var body = await response.Content.ReadAsStringAsync();
+
+                if (response.StatusCode == HttpStatusCode.TooManyRequests)
+                {
+                    lock (_blockLock)
+                        _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+
+                    return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+                }
+
+                if (!response.IsSuccessStatusCode)
+                    return StatusCode((int)response.StatusCode, body);
+
+                _cache.Set(cacheKey, body, TrimsCacheTtl);
+                return Content(body, "application/json");
             }
-
-            if (!response.IsSuccessStatusCode)
-                return StatusCode((int)response.StatusCode, body);
-
-            _cache.Set(cacheKey, body, TrimsCacheTtl);
-            return Content(body, "application/json");
+            catch (HttpRequestException ex)
+            {
+                return StatusCode(503, new
+                {
+                    error = "No se pudo contactar CarAPI",
+                    detail = ex.Message
+                });
+            }
+            catch (TaskCanceledException)
+            {
+                return StatusCode(504, "Timeout llamando a CarAPI");
+            }
         }
 
         // ======================

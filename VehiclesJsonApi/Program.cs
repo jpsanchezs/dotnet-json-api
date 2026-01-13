@@ -2,8 +2,17 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// =============================
+// Services
+// =============================
+
 // HttpClient para consumir CarAPI
 builder.Services.AddHttpClient();
+
+builder.Services.AddMemoryCache();
+
+// Controllers
+builder.Services.AddControllers();
 
 // CORS
 builder.Services.AddCors(options =>
@@ -17,12 +26,12 @@ builder.Services.AddCors(options =>
                 "https://vehicle-information-web.onrender.com"
             )
             .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials(); // opcional, si necesitas cookies/tokens
+            .AllowAnyMethod();
+            // ❌ NO AllowCredentials (no usas cookies)
     });
 });
 
-builder.Services.AddControllers();
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
@@ -35,12 +44,19 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Swagger
+// =============================
+// Middleware pipeline
+// =============================
+
+// Swagger (puede estar en prod sin problema)
 app.UseSwagger();
 app.UseSwaggerUI();
 
-//app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // opcional
 
+app.UseRouting();
+
+// CORS DEBE ir aquí
 app.UseCors("AllowFrontend");
 
 app.UseAuthorization();
