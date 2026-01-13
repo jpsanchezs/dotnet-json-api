@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using System.Net;
 using System.Text.Json;
 using VehiclesApi.Models;
 
@@ -11,77 +13,150 @@ namespace VehiclesApi.Controllers
         private readonly IWebHostEnvironment _env;
         private readonly IConfiguration _config;
         private readonly HttpClient _http;
+        private readonly IMemoryCache _cache;
+
+        // TTLs (ajústalos si quieres)
+        private static readonly TimeSpan CarsCacheTtl = TimeSpan.FromHours(6);
+        private static readonly TimeSpan MotorcyclesCacheTtl = TimeSpan.FromHours(6);
+        private static readonly TimeSpan TrimsCacheTtl = TimeSpan.FromHours(12);
+
+        // Bloqueo temporal cuando CarAPI devuelve 429
+        private static DateTime _carApiBlockedUntil = DateTime.MinValue;
 
         public VehiclesController(
             IWebHostEnvironment env,
             IConfiguration config,
-            IHttpClientFactory httpFactory)
+            IHttpClientFactory httpFactory,
+            IMemoryCache cache)
         {
             _env = env;
             _config = config;
+            _cache = cache;
 
             _http = httpFactory.CreateClient();
             _http.DefaultRequestHeaders.Add("User-Agent", "VehiclesApi/1.0");
             _http.DefaultRequestHeaders.Add("Accept", "application/json");
         }
 
+        // ======================
         // PUENTE A CARAPI
+        // ======================
 
         [HttpGet("carapi/cars")]
         public async Task<IActionResult> GetCarsFromCarApi()
         {
+            const string cacheKey = "carapi:cars";
+
+            if (_cache.TryGetValue(cacheKey, out string cached))
+                return Content(cached, "application/json");
+
+            if (DateTime.UtcNow < _carApiBlockedUntil)
+                return StatusCode(503, "CarAPI temporalmente bloqueada");
+
             var url = "https://carapi.app/api/submodels/v2?sort=Makes.name&direction=asc";
             var response = await _http.GetAsync(url);
             var body = await response.Content.ReadAsStringAsync();
 
+            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            {
+                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+            }
+
             if (!response.IsSuccessStatusCode)
                 return StatusCode((int)response.StatusCode, body);
 
+            _cache.Set(cacheKey, body, CarsCacheTtl);
             return Content(body, "application/json");
         }
 
         [HttpGet("carapi/motorcycles")]
         public async Task<IActionResult> GetMotorcyclesFromCarApi()
         {
+            const string cacheKey = "carapi:motorcycles";
+
+            if (_cache.TryGetValue(cacheKey, out string cached))
+                return Content(cached, "application/json");
+
+            if (DateTime.UtcNow < _carApiBlockedUntil)
+                return StatusCode(503, "CarAPI temporalmente bloqueada");
+
             var url = "https://carapi.app/api/models/powersports?sort=Makes.name&direction=asc&type=street_motorcycle";
             var response = await _http.GetAsync(url);
             var body = await response.Content.ReadAsStringAsync();
 
+            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            {
+                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+            }
+
             if (!response.IsSuccessStatusCode)
                 return StatusCode((int)response.StatusCode, body);
 
+            _cache.Set(cacheKey, body, MotorcyclesCacheTtl);
             return Content(body, "application/json");
         }
 
-        // Trims por submodelo (para obtener lista y así conseguir trimId)
         [HttpGet("carapi/trims/by-submodel/{submodelId}")]
         public async Task<IActionResult> GetTrimsBySubmodel(int submodelId)
         {
+            var cacheKey = $"carapi:trims:submodel:{submodelId}";
+
+            if (_cache.TryGetValue(cacheKey, out string cached))
+                return Content(cached, "application/json");
+
+            if (DateTime.UtcNow < _carApiBlockedUntil)
+                return StatusCode(503, "CarAPI temporalmente bloqueada");
+
             var url = $"https://carapi.app/api/trims/v2?sort=Makes.name&direction=asc&submodel_id={submodelId}";
             var response = await _http.GetAsync(url);
             var body = await response.Content.ReadAsStringAsync();
 
+            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            {
+                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+            }
+
             if (!response.IsSuccessStatusCode)
                 return StatusCode((int)response.StatusCode, body);
 
+            _cache.Set(cacheKey, body, TrimsCacheTtl);
             return Content(body, "application/json");
         }
 
-        // Detalle completo de un trim específico
         [HttpGet("carapi/trims/{trimId}")]
         public async Task<IActionResult> GetTrimDetail(int trimId)
         {
+            var cacheKey = $"carapi:trims:detail:{trimId}";
+
+            if (_cache.TryGetValue(cacheKey, out string cached))
+                return Content(cached, "application/json");
+
+            if (DateTime.UtcNow < _carApiBlockedUntil)
+                return StatusCode(503, "CarAPI temporalmente bloqueada");
+
             var url = $"https://carapi.app/api/trims/v2/{trimId}";
             var response = await _http.GetAsync(url);
             var body = await response.Content.ReadAsStringAsync();
 
+            if (response.StatusCode == HttpStatusCode.TooManyRequests)
+            {
+                _carApiBlockedUntil = DateTime.UtcNow.AddHours(1);
+                return StatusCode(503, "CarAPI alcanzó el límite de peticiones");
+            }
+
             if (!response.IsSuccessStatusCode)
                 return StatusCode((int)response.StatusCode, body);
 
+            _cache.Set(cacheKey, body, TrimsCacheTtl);
             return Content(body, "application/json");
         }
 
+        // ======================
         // MOTOS (JSON + AZURE)
+        // ======================
 
         [HttpGet("motos")]
         public IActionResult GetMotos()
@@ -109,7 +184,9 @@ namespace VehiclesApi.Controllers
             return Ok(motos);
         }
 
+        // ======================
         // CARROS (JSON + AZURE)
+        // ======================
 
         [HttpGet("carros")]
         public IActionResult GetCarros()
